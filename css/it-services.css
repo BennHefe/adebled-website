@@ -1,0 +1,22 @@
+.it-hero .grid { display: grid; gap: 40px; }
+@media (min-width: 960px) { .it-hero .grid { grid-template-columns: 1.15fr .85fr; gap: 72px; align-items: center; } }
+.it-hero .photo { aspect-ratio: 4 / 5; max-height: 560px; background: var(--dark-2); }
+.svc-list { display: grid; }
+.svc { display: grid; gap: 8px 24px; padding: 28px 0; grid-template-columns: auto 1fr; }
+.svc h3 { font-size: clamp(1.3rem, 2.4vw, 1.9rem); }
+.svc p { grid-column: 2; max-width: 38em; }
+@media (min-width: 900px) {
+  .svc { grid-template-columns: 70px 1fr 1.1fr; align-items: baseline; padding: 34px 0; }
+  .svc p { grid-column: 3; }
+}
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
+.chip { min-height: 44px; padding: 0 18px; font: 500 .8125rem/1 "IBM Plex Mono", monospace; letter-spacing: .06em; text-transform: uppercase; background: transparent; color: var(--ink); border: 1.5px solid var(--ink-2); border-radius: 2px; cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.gallery { display: grid; gap: 10px; grid-template-columns: repeat(2, 1fr); }
+@media (min-width: 800px) { .gallery { grid-template-columns: repeat(4, 1fr); gap: 14px; } .gallery .tile:nth-child(4n+2), .gallery .tile:nth-child(4n+3) { margin-top: 24px; } }
+.tile[hidden] { display: none; }
+.steps { display: grid; gap: 0; }
+@media (min-width: 800px) { .steps { grid-template-columns: repeat(3, 1fr); gap: 40px; } }
+.step { padding: 24px 0; border-top: 2px solid var(--ink); display: grid; gap: 10px; }
+.two-col { display: grid; gap: 40px; }
+@media (min-width: 900px) { .two-col { grid-template-columns: 1fr 1fr; gap: 80px; } }

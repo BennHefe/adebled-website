@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://adebled.com.ng/sitemap.xml
