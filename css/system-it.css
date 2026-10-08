@@ -1,0 +1,22 @@
+/* Theme tokens: cream / clay, dark hero.
+   Used by IT Services only. One declaration per token. */
+:root {
+  --bg: #fbf8f1;
+  --bg-alt: #f3eee4;
+  --ink: #1d1812;
+  --ink-2: #4a4137;
+  --line: #ddd3c1;
+  --accent: #b4472a;
+  --accent-ink: #ffffff;
+  --accent-text: #8f3520;
+  --dark: #1a1612;
+  --dark-2: #251f19;
+  --dark-ink: #fbf8f1;
+  --dark-ink-2: #cfc4b3;
+  --dark-line: rgba(251, 248, 241, 0.18);
+  --dark-accent: #e08a6b;
+  --btn-dark: #b4472a;
+  --wa: #25d366;
+  --wa-ink: #04240f;
+  --theme-color: #1a1612;
+}

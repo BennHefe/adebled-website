@@ -1,0 +1,54 @@
+# Adebled Services - cPanel / Apache
+Options -Indexes
+DirectoryIndex index.html
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+# HTTPS
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+RewriteRule ^ https://adebled.com.ng%{REQUEST_URI} [L,R=301]
+# canonical apex (no www)
+RewriteCond %{HTTP_HOST} ^www\.adebled\.com\.ng$ [NC]
+RewriteRule ^ https://adebled.com.ng%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+ErrorDocument 404 /404.html
+
+# never serve source or hidden files
+<FilesMatch "(^\.|\.(md|py|zip|map|sh|log)$)">
+  Require all denied
+</FilesMatch>
+<FilesMatch "^\.htaccess$">
+  Require all denied
+</FilesMatch>
+
+<IfModule mod_headers.c>
+Header always set X-Content-Type-Options "nosniff"
+Header always set X-Frame-Options "SAMEORIGIN"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+Header always set Strict-Transport-Security "max-age=31536000"
+</IfModule>
+
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json application/manifest+json image/svg+xml text/plain text/xml
+</IfModule>
+
+<IfModule mod_mime.c>
+AddType application/manifest+json .webmanifest
+AddType font/woff2 .woff2
+AddType image/webp .webp
+</IfModule>
+
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/webp "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType image/x-icon "access plus 1 year"
+ExpiresByType video/mp4 "access plus 1 year"
+ExpiresByType font/woff2 "access plus 1 year"
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType application/javascript "access plus 1 month"
+ExpiresByType text/html "access plus 0 seconds"
+</IfModule>

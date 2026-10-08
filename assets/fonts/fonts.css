@@ -1,0 +1,45 @@
+/* ADEBLED SERVICES — self-hosted webfonts (no third-party requests).
+ *
+ * Two families do all the work:
+ *
+ *   Archivo   — a variable grotesque with BOTH a weight (400-900) and a width
+ *               (62-125%) axis, from one 90 KB file. Built for signage, so it
+ *               holds up at nameplate sizes; the width axis lets headlines run
+ *               expanded and body text run normal without a second file.
+ *
+ *   IBM Plex Mono — carries every label, stat and eyebrow. A fabrication and
+ *               repair shop runs on spec sheets and part numbers; monospaced
+ *               annotation says that far better than another sans-serif.
+ *
+ * Replaces Inter / Manrope / Sora / Syne (4 families, 4 single static weights,
+ * no real hierarchy between them).
+ */
+
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 400 900;
+  font-stretch: 62% 125%;
+  font-display: swap;
+  src: url(archivo.woff2) format('woff2-variations'),
+       url(archivo.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(plex-mono-400.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(plex-mono-500.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}

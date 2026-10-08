@@ -1,0 +1,22 @@
+/* Theme tokens: navy / blue / white.
+   Used by Home, Aluminium, IT Training. One declaration per token. */
+:root {
+  --bg: #ffffff;
+  --bg-alt: #f1f5f9;
+  --ink: #081a2b;
+  --ink-2: #3b4b5e;
+  --line: #d5dee8;
+  --accent: #1a5fb4;
+  --accent-ink: #ffffff;
+  --accent-text: #1a5fb4;
+  --dark: #081a2b;
+  --dark-2: #0e2740;
+  --dark-ink: #ffffff;
+  --dark-ink-2: #b4c4d6;
+  --dark-line: rgba(255, 255, 255, 0.18);
+  --dark-accent: #7fb3ee;
+  --btn-dark: #2667c4;
+  --wa: #25d366;
+  --wa-ink: #04240f;
+  --theme-color: #081a2b;
+}
